@@ -1,0 +1,7 @@
+@use "../mixins" as *;
+@use "../variables" as *;
+
+.contents {
+    width: $desktop-width;
+    margin: 90px auto;
+}

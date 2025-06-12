@@ -1,0 +1,220 @@
+@use "../mixins" as *;
+@use "../variables" as *;
+
+.contents {
+    margin-top: 90px;
+}
+
+.margin {
+    display: flex;
+    div {
+        width: 40px;
+    }
+}
+
+.map {
+    width: 100%;
+}
+
+.introForUseWrap {
+    width: $desktop-width;
+    height: 697px;
+    margin: 90px auto;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.introImg {
+    width: 728px;
+    height: 697px;
+    border-radius: $img-border-radius;
+    background-color: $gray-500;
+}
+
+.introDetailWrap {
+    width: 500px;
+    height: 697px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 2fr 3fr 2fr;
+}
+
+.introDetail {
+    width: 500px;
+    padding: 16px;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 1px solid $gray-500;
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    .title {
+        width: 200px;
+        display: flex;
+        align-items: center;
+
+        font-size: $font-size-text-m;
+        font-weight: $font-weight-semibold;
+
+        img {
+            margin-right: 8px;
+        }
+    }
+
+    .detailTime {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        div {
+            display: flex;
+            font-size: $font-size-text-m;
+            font-weight: $font-weight-medium;
+
+            span {
+                width: 83px;
+                height: 40px;
+                margin-right: 24px;
+
+                color: $gray-600;
+                text-align: justify;
+
+                &::after {
+                    content: "";
+                    display: inline-block;
+                    width: 100%;
+                }
+
+                &::before {
+                    content: "";
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+    .detailContact {
+        display: flex;
+        align-items: center;
+        font-size: $font-size-text-m;
+        font-weight: $font-weight-medium;
+    }
+
+    .detailGuide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        font-size: $font-size-text-m;
+        font-weight: $font-weight-medium;
+
+        img {
+            margin-bottom: 8px;
+        }
+    }
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    .margin div {
+        width: 0;
+    }
+    .introForUseWrap {
+        width: $tablet-width;
+        margin: 70px auto;
+    }
+    .introImg {
+        width: 470px;
+        height: 456px;
+    }
+
+    .introDetailWrap {
+        height: 456px;
+    }
+
+    .introDetail {
+        .detailTime {
+            div {
+                font-size: $font-size-text-s;
+
+                span {
+                    height: 20px;
+                }
+            }
+        }
+
+        .detailContact {
+            font-size: $font-size-text-s;
+        }
+
+        .detailGuide {
+            font-size: $font-size-text-s;
+            img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+}
+
+@media (min-width: $mobile-width) and (max-width: $tablet-width) {
+    .margin div {
+        width: 0;
+    }
+
+    .introForUseWrap {
+        width: $mobile-width;
+        flex-direction: column;
+    }
+
+    .introImg {
+        width: $mobile-width;
+        height: 456px;
+    }
+
+    .introDetailWrap {
+        height: 456px;
+    }
+
+    .introDetail {
+        width: $mobile-width;
+        .title {
+            margin-right: 24px;
+            font-size: $font-size-text-s;
+            img {
+                width: 16px;
+            }
+        }
+        .detailTime {
+            width: 100%;
+            div {
+                font-size: $font-size-text-xs;
+
+                span {
+                    width: 46px;
+                    height: 20px;
+                    margin-right: 12px;
+                }
+            }
+        }
+
+        .detailContact {
+            width: 100%;
+            font-size: $font-size-text-xs;
+        }
+
+        .detailGuide {
+            width: 100%;
+            align-items: flex-start;
+            font-size: $font-size-text-xs;
+            img {
+                width: 40px;
+                height: 40px;
+                margin-left: 28px;
+            }
+        }
+    }
+}

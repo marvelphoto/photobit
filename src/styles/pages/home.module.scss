@@ -1,0 +1,58 @@
+@use "../variables" as *;
+
+.home {
+    width: 100vw;
+    height: 100vh;
+    margin-top: -100px;
+    background-color: pink;
+}
+
+.home div {
+    width: $desktop-width;
+    margin: 0 auto;
+    padding-top: 70vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+}
+
+.home div p {
+    margin-right: 12px;
+    font-size: $font-size-title;
+    font-weight: $font-weight-regular;
+}
+
+.home div span {
+    font-size: $font-size-heading;
+    font-weight: $font-weight-semibold;
+    margin-bottom: -12px;
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    .home {
+        background-color: red;
+    }
+
+    .home div {
+        width: $tablet-width;
+    }
+}
+
+@media (min-width: $mobile-width) and (max-width: $tablet-width) {
+    .home {
+        background-color: blue;
+    }
+    .home div {
+        width: $mobile-width;
+    }
+    .home div p {
+        margin-right: 12px;
+        font-size: $font-size-text-s;
+    }
+
+    .home div span {
+        font-size: $font-size-text-m;
+        font-weight: $font-weight-semibold;
+        margin-bottom: -4px;
+    }
+}

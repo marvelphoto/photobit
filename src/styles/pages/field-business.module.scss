@@ -1,0 +1,139 @@
+@use "../mixins" as *;
+@use "../variables" as *;
+
+.contents {
+    margin-top: 40px;
+}
+
+.type {
+    height: 877px;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(5%, auto));
+    grid-template-rows: repeat(4, 1fr);
+
+    &:last-child {
+        margin-bottom: 314px;
+    }
+}
+
+.selectedImg {
+    grid-column: auto / span 11;
+    height: 619px;
+    background-color: blue;
+    overflow: hidden;
+}
+
+.selectedImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.typeDesc {
+    grid-column: auto / span 9;
+    height: 619px;
+    background-color: $gray-900;
+    color: $gray-100;
+    padding: 214px 0 0 80px;
+}
+
+.imgList {
+    height: 258px;
+    background-color: red;
+    grid-column: auto / span 5;
+}
+
+.imgList img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    .type {
+        height: 460px;
+        margin-top: 54x;
+    }
+
+    .selectedImg {
+        height: 330px;
+    }
+
+    .typeDesc {
+        height: 330px;
+        padding: 90px 0 0 40px;
+
+        h4 {
+            align-items: flex-start;
+            margin-left: 0px;
+            font-size: $font-size-text-m;
+            margin-bottom: 8px;
+        }
+
+        p {
+            font-size: $font-size-text-s;
+            text-align: left;
+            margin: 0;
+        }
+    }
+
+    .imgList {
+        height: 138px;
+    }
+}
+
+@media (min-width: $mobile-width) and (max-width: $tablet-width) {
+    .type {
+        height: 800px;
+        margin-top: 10px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 314px 180px 120px 100px;
+
+        &:last-child {
+            margin-bottom: 314px;
+        }
+    }
+
+    .selectedImg {
+        grid-column: 2fr;
+        height: 314px;
+    }
+
+    .typeDesc {
+        padding: 12px;
+        grid-column: 2fr;
+        grid-row: 2;
+        height: 180px;
+        width: 100%;
+        margin: 0 auto;
+
+        h4 {
+            width: $mobile-width;
+            margin: 14px auto;
+        }
+        p {
+            width: $mobile-width;
+            margin: 8px auto;
+        }
+    }
+
+    .imgList {
+        height: 120px;
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .secondImg {
+        grid-column: 2;
+        grid-row: 3;
+    }
+    .thirdImg {
+        grid-column: 1;
+        grid-row: 4;
+    }
+    .fourthImg {
+        grid-column: 2;
+        grid-row: 4;
+    }
+}

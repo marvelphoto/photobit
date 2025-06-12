@@ -1,0 +1,137 @@
+@use "variables" as *; // 컬러, 폰트 변수
+@use "mixins" as *; // 재사용 가능한 스타일
+@use "fonts" as *;
+@use "reset";
+
+body {
+    font-family: $font-primary;
+    font-size: $font-size-base;
+    font-weight: $font-weight-regular;
+    line-height: 1.5;
+    color: $gray-900;
+    overflow-x: hidden;
+}
+
+.marquee-height {
+    height: 32px;
+}
+
+.header-height {
+    height: 70px;
+}
+
+.explanation {
+    width: $desktop-width;
+    margin: 0 auto;
+}
+
+.explanation h3 {
+    @include page-title;
+}
+
+.explanation h4 {
+    @include page-subtitle;
+    display: flex;
+    align-items: center;
+    img {
+        margin-right: 8px;
+    }
+}
+
+.explanation p {
+    @include page-description;
+}
+
+.explanation h5 {
+    font-size: 32px;
+    padding-left: 16px;
+    padding-right: 60px;
+}
+
+.explanation h6 {
+    font-size: 26px;
+    font-weight: 400;
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    .explanation {
+        width: $tablet-width;
+    }
+    .explanation h3 {
+        width: $tablet-width;
+        font-size: $font-size-title;
+        text-align: center;
+    }
+
+    .explanation h4 {
+        width: 525px;
+        font-size: $font-size-subtitle;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin: 8px auto;
+        img {
+            margin-right: 0;
+            margin-bottom: 8px;
+        }
+    }
+
+    .explanation p {
+        width: 620px;
+        font-size: $font-size-text-s;
+        text-align: center;
+        margin: 16px auto;
+    }
+
+    .explanation h5 {
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .explanation h6 {
+        font-size: 20px;
+        font-weight: 400;
+    }
+}
+
+@media (min-width: $mobile-width) and (max-width: $tablet-width) {
+    .explanation {
+        width: $mobile-width;
+    }
+    .explanation h3 {
+        width: $mobile-width;
+        font-size: $font-size-text-m;
+        text-align: center;
+    }
+    .explanation h4 {
+        width: 280px;
+        margin: 16px auto;
+        font-size: $font-size-base;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+
+        img {
+            width: 20px;
+            margin-right: 0;
+            margin-bottom: 8px;
+        }
+    }
+
+    .explanation p {
+        width: $mobile-width;
+        font-size: $font-size-text-xs;
+        margin: 16px auto;
+        text-align: center;
+    }
+
+    .explanation h5 {
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .explanation h6 {
+        font-size: 16px;
+        font-weight: 400;
+    }
+}

@@ -1,0 +1,78 @@
+@use "../mixins" as *;
+@use "../variables" as *;
+
+.profileA {
+    margin-top: 88px;
+}
+
+.profileB {
+    margin-top: 120px;
+    margin-bottom: 320px;
+}
+
+.imgWrap {
+    width: max-content;
+    margin-top: 68px;
+    white-space: nowrap;
+    overflow: auto;
+
+    // 스크롤바 숨기기
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    z-index: 999;
+}
+
+.imgWrap div {
+    width: 200px;
+    height: 250px;
+    margin-right: 24px;
+    overflow: hidden;
+    display: inline-block;
+    border-radius: $img-border-radius;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.first {
+    transform: translateX(-40%);
+    animation: marquee-move-right 50s linear infinite;
+}
+
+.second {
+    animation: marquee-move-left 50s linear infinite;
+}
+
+@keyframes marquee-move-left {
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes marquee-move-right {
+    to {
+        transform: translateX(10%);
+    }
+}
+
+.imgWrap:hover {
+    animation-play-state: paused;
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    .imgWrap div {
+        width: 190px;
+        height: 240px;
+    }
+}
+
+@media (min-width: $mobile-width) and (max-width: $tablet-width) {
+    .imgWrap div {
+        width: 160px;
+        height: 220px;
+    }
+}

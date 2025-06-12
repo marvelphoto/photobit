@@ -1,0 +1,72 @@
+@use "../variables" as *;
+
+.footer {
+    background-color: $gray-200;
+}
+
+.footerContents {
+    width: $desktop-width;
+    margin: 0 auto;
+    padding: 72px 0;
+}
+
+.information {
+    margin-top: 170px;
+}
+
+.information ul {
+    margin-top: 40px;
+}
+
+.information ul li {
+    font-size: $font-size-base;
+    font-weight: $font-weight-regular;
+    color: $gray-700;
+    margin-top: 8px;
+
+    &:nth-child(3) {
+        display: inline-block;
+        margin-right: 32px;
+    }
+    &:nth-child(4) {
+        display: inline-block;
+    }
+}
+
+.information ul li span {
+    margin-right: 12px;
+    font-weight: $font-weight-semibold;
+    color: $gray-800;
+}
+
+.article h3 {
+    font-size: $font-size-subtitle;
+    font-weight: $font-weight-semibold;
+    color: $gray-800;
+}
+
+.article a {
+    font-size: $font-size-base;
+    font-weight: $font-weight-semibold;
+    color: $gray-700;
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    .footerContents {
+        width: $tablet-width;
+        margin: 0 auto;
+        padding: 72px 0;
+    }
+}
+
+@media (min-width: $mobile-width) and (max-width: $tablet-width) {
+    .information {
+        margin-top: 80px;
+    }
+
+    .footerContents {
+        width: $mobile-width;
+        margin: 0 auto;
+        padding: 60px 0;
+    }
+}

@@ -1,0 +1,123 @@
+@use "../mixins" as *;
+@use "../variables" as *;
+
+.wedding {
+    position: relative;
+}
+
+// .swedModalWrap {
+//     position: absolute;
+//     top: -200px;
+//     width: 100%;
+//     height: 100%;
+//     background-color: rgba(0, 0, 0, 0.5);
+//     z-index: 9999;
+// }
+
+// .swedModal {
+//     position: relative;
+//     width: 540px;
+//     height: 580px;
+//     margin-top: 50%;
+//     margin-left: 50%;
+//     transform: translate(-50%, -85vh);
+//     border-radius: $img-border-radius;
+//     border: 1px solid $gray-500;
+//     background-color: $gray-100;
+//     overflow: hidden;
+// }
+
+// .btnWrap {
+//     display: flex;
+//     position: absolute;
+//     bottom: 0;
+//     width: 100%;
+//     div {
+//         width: 50%;
+//         height: 80px;
+//         background-color: $gray-200;
+//         border-right: 1px solid $gray-500;
+//         font-size: $font-size-text-m;
+//         @include flex-center;
+//         color: $gray-900;
+//     }
+// }
+
+// .view {
+//     display: block;
+// }
+
+// .hide {
+//     display: none;
+// }
+
+.contents {
+    width: $desktop-width;
+    margin: 64px auto;
+
+    position: relative;
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    .contents {
+        width: $tablet-width;
+    }
+
+    .slideBtn {
+        width: $tablet-width;
+        img {
+            width: 80px;
+        }
+    }
+
+    .swedModal {
+        transform: translate(-50%, -70vh);
+    }
+}
+
+@media (min-width: $mobile-width) and (max-width: $tablet-width) {
+    .contents {
+        width: $mobile-width;
+    }
+
+    .slideBtn {
+        width: $mobile-width;
+        top: 14%;
+        img {
+            width: 40px;
+        }
+    }
+
+    .slideImg {
+        position: absolute;
+        width: max-content;
+        height: 280px;
+
+        li {
+            &:nth-child(odd) {
+                width: 166px;
+                height: 239px;
+            }
+            &:nth-child(even) {
+                width: 239px;
+                height: 166px;
+            }
+        }
+    }
+
+    .swedModal {
+        position: relative;
+        width: 270px;
+        height: 290px;
+        transform: translate(-50%, 0vh);
+    }
+
+    .btnWrap {
+        div {
+            width: 50%;
+            height: 40px;
+
+            font-size: $font-size-text-xs;
+        }
+    }
+}
