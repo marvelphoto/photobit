@@ -16,6 +16,10 @@
         bottom: -32px;
         right: 700px;
         z-index: 600;
+
+        span {
+            // color: #fff;
+        }
     }
 
     div {
@@ -24,9 +28,16 @@
         height: 559px;
         background-color: $gray-500;
         border-radius: $img-border-radius;
+        overflow: hidden;
 
         right: 0;
         bottom: 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 }
 
@@ -46,8 +57,16 @@
         position: absolute;
         width: 504px;
         height: 549px;
-        background-color: $gray-500;
+        // background-color: $gray-500;
         border-radius: $img-border-radius;
+
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
     }
 }
 
@@ -66,10 +85,17 @@
     div {
         position: absolute;
         right: 0;
-        width: 504px;
+        width: 418px;
         height: 327px;
         background-color: $gray-500;
         border-radius: $img-border-radius;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
     }
 }
 

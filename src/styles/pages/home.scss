@@ -4,16 +4,19 @@
     width: 100vw;
     height: 100vh;
     margin-top: -100px;
-    background-color: pink;
+    position: relative;
+    overflow: hidden;
 }
 
 .home div {
+    position: absolute;
     width: $desktop-width;
-    margin: 0 auto;
-    padding-top: 70vh;
+    bottom: 180px;
+    right: 220px;
     display: flex;
     align-items: flex-end;
     justify-content: end;
+    color: rgb(224, 224, 224);
 }
 
 .home div p {
@@ -28,20 +31,19 @@
     margin-bottom: -12px;
 }
 
-@media (min-width: $tablet-width) and (max-width: $desktop-width) {
-    .home {
-        background-color: red;
-    }
+.home img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
 
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
     .home div {
         width: $tablet-width;
     }
 }
 
 @media (min-width: $mobile-width) and (max-width: $tablet-width) {
-    .home {
-        background-color: blue;
-    }
     .home div {
         width: $mobile-width;
     }

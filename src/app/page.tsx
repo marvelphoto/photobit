@@ -1,9 +1,10 @@
 // import Image from "next/image";
-import styles from "@/styles/pages/home.module.scss";
+import "@/styles/pages/home.scss";
 
 export default function Home() {
     return (
-        <div className={styles.home}>
+        <div className="home">
+            <img src="/images/main/1.jpg" alt="main background" />
             <div>
                 <p>
                     빛으로 감성을 채우고
