@@ -1,0 +1,28 @@
+@use "../../styles/variables" as *;
+
+.marquee {
+    padding: 4px;
+    background-color: $gray-900;
+    overflow: clip;
+    position: fixed;
+    z-index: 9999;
+}
+.marquee div {
+    display: flex;
+    width: max-content;
+    animation: marquee-move-text 100s linear infinite;
+}
+
+.marquee p {
+    white-space: nowrap;
+    margin-right: 250px;
+    font-size: $font-size-base;
+    font-weight: $font-weight-light;
+    color: $highlight-beige;
+}
+
+@keyframes marquee-move-text {
+    to {
+        transform: translateX(-50%);
+    }
+}
