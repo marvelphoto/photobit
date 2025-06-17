@@ -25,7 +25,7 @@
 
 .imgWrap div {
     width: 200px;
-    height: 250px;
+    height: 300px;
     margin-right: 24px;
     overflow: hidden;
     display: inline-block;
@@ -40,7 +40,7 @@
 
 .first {
     transform: translateX(-40%);
-    animation: marquee-move-right 50s linear infinite;
+    animation: marquee-move-right 70s linear infinite;
 }
 
 .second {

@@ -56,7 +56,6 @@
             height: 298px;
 
             img {
-                // width: height:
                 width: 100%;
                 height: auto;
                 object-fit: cover;
@@ -82,20 +81,18 @@
             height: 195px;
 
             img {
-                // width: height:
                 width: 100%;
                 height: auto;
                 object-fit: cover;
             }
 
-            &:nth-child(6) {
-                color: rgba(255, 0, 0, 0);
-                background-color: $gray-500;
+            span {
+                font-size: $font-size-text-s;
+                font-weight: $font-weight-bold;
             }
 
-            &:nth-child(12) {
-                color: rgba(255, 0, 0, 0);
-                background-color: $gray-500;
+            &:nth-child(6) {
+                padding-top: 60%;
             }
         }
     }

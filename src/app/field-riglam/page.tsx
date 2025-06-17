@@ -100,8 +100,6 @@ export default function FieldWeddingPage() {
                     width={1920} // 실제 이미지 비율에 맞게
                     height={1080}
                     style={{ width: "100%", height: "auto", cursor: "pointer" }}
-
-                    // unoptimized // 서버 최적화 안 할 때만 필요, 성능 걱정되면 빼도 됨
                 />
                 {/* <Image src="/images/photos/riglam.jpg" alt="" width={100} height={100} /> */}
             </div>

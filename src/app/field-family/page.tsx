@@ -10,9 +10,7 @@ export default function FieldFamilyPage() {
     const visibleCount = 6;
     const [startIndex, setStartIndex] = useState(totalItems);
     const [selected, setSelected] = useState(imgArr[1]);
-    const [isAnimating, setIsAnimating] = useState<"left" | "right" | null>(
-        null
-    );
+    const [isAnimating, setIsAnimating] = useState<"left" | "right" | null>(null);
 
     const arrowHandle = (direction: "left" | "right") => {
         setIsAnimating(direction);
@@ -21,18 +19,14 @@ export default function FieldFamilyPage() {
         setTimeout(
             () =>
                 setStartIndex((prevIndex) => {
-                    if (direction === "right")
-                        return (prevIndex + 1) % totalItems;
+                    if (direction === "right") return (prevIndex + 1) % totalItems;
                     else return (prevIndex - 1 + totalItems) % totalItems;
                 }),
             400
         );
     };
 
-    const visibleArr = Array.from(
-        { length: visibleCount },
-        (_, i) => imgArr[(startIndex + i) % totalItems]
-    );
+    const visibleArr = Array.from({ length: visibleCount }, (_, i) => imgArr[(startIndex + i) % totalItems]);
 
     console.log(visibleArr);
     return (
@@ -69,34 +63,26 @@ export default function FieldFamilyPage() {
                 </ul>
                 <div className={styles.exampleContainer}>
                     <div className={styles.selectedExam}>
-                        <Image
-                            src={`/images/photos/${selected}.jpg`}
+                        <img
+                            src={`/images/photos/가족/${selected}.webp`}
                             alt="가족사진 확대"
                             width={230}
                             height={130}
                         />
                     </div>
                     <span onClick={() => arrowHandle("left")}>
-                        <Image
-                            src="/images/icon-arrow.png"
-                            alt="왼쪽 화살표"
-                            width={100}
-                            height={100}
-                        />
+                        <Image src="/images/icon-arrow.png" alt="왼쪽 화살표" width={100} height={100} />
                     </span>
                     <ul
-                        className={`${styles.examList}  ${
-                            isAnimating === "left" ? styles.left : ""
-                        } ${isAnimating === "right" ? styles.right : ""}`}
+                        className={`${styles.examList}  ${isAnimating === "left" ? styles.left : ""} ${
+                            isAnimating === "right" ? styles.right : ""
+                        }`}
                     >
                         {visibleArr.map((item: string, index: number) => {
                             return (
-                                <li
-                                    key={index}
-                                    onClick={() => setSelected(item)}
-                                >
+                                <li key={index} onClick={() => setSelected(item)}>
                                     <Image
-                                        src={`/images/photos/${item}.jpg`}
+                                        src={`/images/photos/가족/${item}.webp`}
                                         alt="가족사진 목록"
                                         width={230}
                                         height={130}
@@ -106,12 +92,7 @@ export default function FieldFamilyPage() {
                         })}
                     </ul>
                     <span onClick={() => arrowHandle("right")}>
-                        <Image
-                            src="/images/icon-arrow.png"
-                            alt="오른쪽 화살표"
-                            width={100}
-                            height={100}
-                        />
+                        <Image src="/images/icon-arrow.png" alt="오른쪽 화살표" width={100} height={100} />
                     </span>
                 </div>
             </div>

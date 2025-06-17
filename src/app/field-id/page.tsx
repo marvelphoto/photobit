@@ -1,4 +1,5 @@
 import styles from "@/styles/pages/field-id.module.scss";
+import Image from "next/image";
 
 export default function FieldIdPage() {
     return (
@@ -16,20 +17,51 @@ export default function FieldIdPage() {
 
             <ul className={styles.contents}>
                 <li>
-                    <img src={`/images/photos/증명/증명1.jpg`} alt="증명이미지" />
+                    {/* width: 314px; height: 452px; */}
+                    <Image
+                        src={`/images/photos/증명/증명1.webp`}
+                        alt="증명이미지"
+                        width={314}
+                        height={452}
+                        quality={90}
+                    />
                 </li>
                 <li>
-                    <img src={`/images/photos/증명/증명2.jpg`} alt="증명이미지" />
+                    <Image
+                        src={`/images/photos/증명/증명2.webp`}
+                        alt="증명이미지"
+                        width={314}
+                        height={452}
+                        quality={90}
+                    />
                 </li>
                 <li>
-                    <img src={`/images/photos/증명/증명3.jpg`} alt="증명이미지" />
+                    <Image
+                        src={`/images/photos/증명/증명3.webp`}
+                        alt="증명이미지"
+                        width={314}
+                        height={452}
+                        quality={90}
+                    />
                 </li>
                 <li>
-                    <img src={`/images/photos/증명/증명4.jpg`} alt="증명이미지" />
+                    <Image
+                        src={`/images/photos/증명/증명4.webp`}
+                        alt="증명이미지"
+                        width={314}
+                        height={452}
+                        quality={90}
+                    />
                 </li>
 
                 <li>
-                    <img src={`/images/photos/증명/증명5.jpg`} alt="증명이미지" />
+                    <Image
+                        src={`/images/photos/증명/증명5.webp`}
+                        alt="증명이미지"
+                        width={314}
+                        height={452}
+                        quality={90}
+                    />
                 </li>
                 <li>
                     <span>
@@ -38,20 +70,50 @@ export default function FieldIdPage() {
                     </span>
                 </li>
                 <li>
-                    <img src={`/images/photos/증명/증명7.jpg`} alt="증명이미지" />
+                    <Image
+                        src={`/images/photos/증명/증명7.webp`}
+                        alt="증명이미지"
+                        width={314}
+                        height={452}
+                        quality={90}
+                    />
                 </li>
                 <li>
-                    <img src={`/images/photos/증명/증명8.jpg`} alt="증명이미지" />
+                    <Image
+                        src={`/images/photos/증명/증명8.webp`}
+                        alt="증명이미지"
+                        width={314}
+                        height={452}
+                        quality={90}
+                    />
                 </li>
 
                 <li>
-                    <img src={`/images/photos/증명/증명9.jpg`} alt="증명이미지" />
+                    <Image
+                        src={`/images/photos/증명/증명9.webp`}
+                        alt="증명이미지"
+                        width={314}
+                        height={452}
+                        quality={90}
+                    />
                 </li>
                 <li>
-                    <img src={`/images/photos/증명/증명10.jpg`} alt="증명이미지" />
+                    <Image
+                        src={`/images/photos/증명/증명10.webp`}
+                        alt="증명이미지"
+                        width={314}
+                        height={452}
+                        quality={90}
+                    />
                 </li>
                 <li>
-                    <img src={`/images/photos/증명/증명11.jpg`} alt="증명이미지" />
+                    <Image
+                        src={`/images/photos/증명/증명11.webp`}
+                        alt="증명이미지"
+                        width={314}
+                        height={452}
+                        quality={90}
+                    />
                 </li>
                 <li>
                     <span>
@@ -61,16 +123,40 @@ export default function FieldIdPage() {
                 </li>
 
                 <li>
-                    <img src={`/images/photos/증명/증명12.jpg`} alt="증명이미지" />
+                    <Image
+                        src={`/images/photos/증명/증명12.webp`}
+                        alt="증명이미지"
+                        width={314}
+                        height={452}
+                        quality={90}
+                    />
                 </li>
                 <li>
-                    <img src={`/images/photos/증명/증명13.jpg`} alt="증명이미지" />
+                    <Image
+                        src={`/images/photos/증명/증명13.webp`}
+                        alt="증명이미지"
+                        width={314}
+                        height={452}
+                        quality={90}
+                    />
                 </li>
                 <li>
-                    <img src={`/images/photos/증명/증명14.jpg`} alt="증명이미지" />
+                    <Image
+                        src={`/images/photos/증명/증명14.webp`}
+                        alt="증명이미지"
+                        width={314}
+                        height={452}
+                        quality={90}
+                    />
                 </li>
                 <li>
-                    <img src={`/images/photos/증명/증명15.jpg`} alt="증명이미지" />
+                    <Image
+                        src={`/images/photos/증명/증명15.webp`}
+                        alt="증명이미지"
+                        width={314}
+                        height={452}
+                        quality={90}
+                    />
                 </li>
             </ul>
         </div>

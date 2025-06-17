@@ -26,22 +26,21 @@ export default function FieldBusinessPage() {
                 <h3>출장사진</h3>
                 <h4>어디서든, 전문가의 손길로 감동을 담다</h4>
                 <p>
-                    어디서든 전문적인 촬영으로, 중요한 순간을 세심하게
-                    담아냅니다.
-                    <br /> 출장 촬영을 통해, 귀하의 필요와 상황에 맞춘 고퀄리티
-                    이미지를 제공하며, 가장 자연스럽고 프로페셔널한 모습을
-                    완성해드립니다.
+                    어디서든 전문적인 촬영으로, 중요한 순간을 세심하게 담아냅니다.
+                    <br /> 출장 촬영을 통해, 귀하의 필요와 상황에 맞춘 고퀄리티 이미지를 제공하며, 가장
+                    자연스럽고 프로페셔널한 모습을 완성해드립니다.
                 </p>
             </div>
 
             <div className={styles.contents}>
                 <div className={styles.type}>
                     <div className={styles.selectedImg}>
-                        <Image
-                            src={`/images/photos/${thumbnail[0]}.jpg`}
+                        <img
+                            src={`/images/photos/출장/취업박람회/${thumbnail[0]}.webp`}
                             alt="비즈니스 이미지"
                             width={230}
                             height={130}
+                            // quality={90}
                         />
                     </div>
                     <div className={`${styles.typeDesc} explanation`}>
@@ -72,7 +71,7 @@ export default function FieldBusinessPage() {
                                 onClick={() => handleThumbnail(0, item)}
                             >
                                 <Image
-                                    src={`/images/photos/${item}.jpg`}
+                                    src={`/images/photos/출장/취업박람회/${item}.webp`}
                                     alt="비즈니스 이미지"
                                     width={230}
                                     height={130}
@@ -96,11 +95,12 @@ export default function FieldBusinessPage() {
                     </div>
 
                     <div className={styles.selectedImg}>
-                        <Image
-                            src={`/images/photos/${thumbnail[1]}.jpg`}
+                        <img
+                            src={`/images/photos/출장/웨딩/${thumbnail[1]}.webp`}
                             alt="비즈니스 이미지"
                             width={230}
                             height={130}
+                            // quality={90}
                         />
                     </div>
                     {imgArr[1].map((item, index) => {
@@ -119,7 +119,7 @@ export default function FieldBusinessPage() {
                                 onClick={() => handleThumbnail(1, item)}
                             >
                                 <Image
-                                    src={`/images/photos/${item}.jpg`}
+                                    src={`/images/photos/출장/웨딩/${item}.webp`}
                                     alt="비즈니스 이미지"
                                     width={230}
                                     height={130}
@@ -131,11 +131,12 @@ export default function FieldBusinessPage() {
 
                 <div className={styles.type}>
                     <div className={styles.selectedImg}>
-                        <Image
-                            src={`/images/photos/${thumbnail[2]}.jpg`}
+                        <img
+                            src={`/images/photos/출장/고희연/${thumbnail[2]}.webp`}
                             alt="비즈니스 이미지"
                             width={230}
                             height={130}
+                            // quality={100}
                         />
                     </div>
                     <div className={`${styles.typeDesc} explanation`}>
@@ -164,7 +165,7 @@ export default function FieldBusinessPage() {
                                 onClick={() => handleThumbnail(2, item)}
                             >
                                 <Image
-                                    src={`/images/photos/${item}.jpg`}
+                                    src={`/images/photos/출장/고희연/${item}.webp`}
                                     alt="비즈니스 이미지"
                                     width={230}
                                     height={130}
@@ -185,11 +186,12 @@ export default function FieldBusinessPage() {
                         </p>
                     </div>
                     <div className={styles.selectedImg}>
-                        <Image
-                            src={`/images/photos/${thumbnail[3]}.jpg`}
+                        <img
+                            src={`/images/photos/출장/기업/${thumbnail[3]}.webp`}
                             alt="비즈니스 이미지"
                             width={230}
                             height={130}
+                            // quality={100}
                         />
                     </div>
                     {imgArr[3].map((item, index) => {
@@ -208,7 +210,7 @@ export default function FieldBusinessPage() {
                                 onClick={() => handleThumbnail(3, item)}
                             >
                                 <Image
-                                    src={`/images/photos/${item}.jpg`}
+                                    src={`/images/photos/출장/기업/${item}.webp`}
                                     alt="비즈니스 이미지"
                                     width={230}
                                     height={130}

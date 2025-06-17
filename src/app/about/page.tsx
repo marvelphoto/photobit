@@ -1,4 +1,5 @@
 import "@/styles/pages/about.scss";
+import Image from "next/image";
 
 export default function AboutPage() {
     return (
@@ -14,13 +15,13 @@ export default function AboutPage() {
                         PHOTO <span>BIT</span>
                     </h2>
                     <div>
-                        <img src="/images/about/11.jpg" alt="main background" />
+                        <Image src="/images/about/11.jpg" alt="main background" fill quality={90} />
                     </div>
                 </div>
 
                 <div className="secondFloor">
                     <div>
-                        <img src="/images/about/2.jpg" alt="main background" />
+                        <Image src="/images/about/2.jpg" alt="main background" fill quality={90} />
                     </div>
                     <p>
                         출장사진, 증명·여권사진, 프로필, 복원사진, 가족사진,
@@ -35,7 +36,7 @@ export default function AboutPage() {
 
                 <div className="thirdFloor">
                     <div>
-                        <img src="/images/about/3.jpg" alt="main background" />
+                        <Image src="/images/about/3.jpg" alt="main background" fill quality={90} />
                     </div>
                     <p>
                         2017년부터 국내에서 보기 힘든

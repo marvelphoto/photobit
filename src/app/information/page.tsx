@@ -1,16 +1,32 @@
 "use client";
 
 import styles from "@/styles/pages/information.module.scss";
-import { useEffect } from "react";
-import dynamic from "next/dynamic";
+import { useEffect, useRef } from "react";
+
 import Image from "next/image";
 
-const Map = dynamic(() => import("../components/map/Map"), { ssr: false });
-
 export default function FieldInformationPage() {
+    const mapRef = useRef<HTMLDivElement>(null);
     useEffect(() => {
-        // const map = document
+        const script = document.createElement("script");
+        script.src = `https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=${process.env.NEXT_PUBLIC_MAP_API_KEY}`;
+        script.async = true;
+        script.onload = () => {
+            if (window.naver && mapRef.current) {
+                new window.naver.maps.Map(mapRef.current, {
+                    center: new window.naver.maps.LatLng(37.495477, 126.843953),
+                    zoom: 55
+                });
+            }
+        };
+
+        document.head.appendChild(script);
+
+        return () => {
+            document.head.removeChild(script);
+        };
     }, []);
+
     return (
         <div>
             <div className="explanation">
@@ -26,10 +42,13 @@ export default function FieldInformationPage() {
             </div>
             <div className={styles.contents}>
                 <div className={styles.map}>
-                    <Map latitude={37.495477} longitude={126.843953} />
+                    <div ref={mapRef} style={{ width: "100%", height: "400px" }} />
+                    {/* <Map latitude={37.495477} longitude={126.843953} /> */}
                 </div>
                 <div className={styles.introForUseWrap}>
-                    <div className={styles.introImg}></div>
+                    <div className={styles.introImg}>
+                        <img src="/images/photos/정보/info.jpg" alt="사진관 위치" />
+                    </div>
                     <div className={styles.introDetailWrap}>
                         <div className={styles.introDetail}>
                             <div className={styles.title}>

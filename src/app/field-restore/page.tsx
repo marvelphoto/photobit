@@ -24,9 +24,7 @@ export default function FieldRestorePage() {
     const visibleCount = 6;
     const [startIndex, setStartIndex] = useState(totalItems);
     const [selected, setSelected] = useState(imgArr[1]);
-    const [isAnimating, setIsAnimating] = useState<"left" | "right" | null>(
-        null
-    );
+    const [isAnimating, setIsAnimating] = useState<"left" | "right" | null>(null);
 
     const arrowHandle = (direction: "left" | "right") => {
         setIsAnimating(direction);
@@ -35,18 +33,14 @@ export default function FieldRestorePage() {
         setTimeout(
             () =>
                 setStartIndex((prevIndex) => {
-                    if (direction === "right")
-                        return (prevIndex + 1) % totalItems;
+                    if (direction === "right") return (prevIndex + 1) % totalItems;
                     else return (prevIndex - 1 + totalItems) % totalItems;
                 }),
             400
         );
     };
 
-    const visibleArr = Array.from(
-        { length: visibleCount },
-        (_, i) => imgArr[(startIndex + i) % totalItems]
-    );
+    const visibleArr = Array.from({ length: visibleCount }, (_, i) => imgArr[(startIndex + i) % totalItems]);
 
     return (
         <div>
@@ -54,11 +48,9 @@ export default function FieldRestorePage() {
                 <h3>복원 사진</h3>
                 <h4>흐릿한 기억을 선명하게, 추억을 다시 만나다</h4>
                 <p>
-                    시간 속에 흐릿해진 추억을, 섬세하게 복원하여 다시 선명하게
-                    되살립니다.
-                    <br /> 잃어버린 순간들을 되찾아, 그때의 감동을 그대로
-                    담아내는 복원사진으로, 당신만의 소중한 기억을 다시 만날 수
-                    있습니다.
+                    시간 속에 흐릿해진 추억을, 섬세하게 복원하여 다시 선명하게 되살립니다.
+                    <br /> 잃어버린 순간들을 되찾아, 그때의 감동을 그대로 담아내는 복원사진으로, 당신만의
+                    소중한 기억을 다시 만날 수 있습니다.
                 </p>
             </div>
             <div className={styles.exampleContainer}>
@@ -71,17 +63,12 @@ export default function FieldRestorePage() {
                     />
                 </div>
                 <span onClick={() => arrowHandle("left")}>
-                    <Image
-                        src="/images/icon-arrow.png"
-                        alt="왼쪽 화살표"
-                        width={100}
-                        height={100}
-                    />
+                    <Image src="/images/icon-arrow.png" alt="왼쪽 화살표" width={100} height={100} />
                 </span>
                 <ul
-                    className={`${styles.examList}  ${
-                        isAnimating === "left" ? styles.left : ""
-                    } ${isAnimating === "right" ? styles.right : ""}`}
+                    className={`${styles.examList}  ${isAnimating === "left" ? styles.left : ""} ${
+                        isAnimating === "right" ? styles.right : ""
+                    }`}
                 >
                     {visibleArr.map((item: string, index: number) => {
                         return (
@@ -97,12 +84,7 @@ export default function FieldRestorePage() {
                     })}
                 </ul>
                 <span onClick={() => arrowHandle("right")}>
-                    <Image
-                        src="/images/icon-arrow.png"
-                        alt="오른쪽 화살표"
-                        width={100}
-                        height={100}
-                    />
+                    <Image src="/images/icon-arrow.png" alt="오른쪽 화살표" width={100} height={100} />
                 </span>
             </div>
         </div>

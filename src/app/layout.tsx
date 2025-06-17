@@ -19,7 +19,7 @@ export default function RootLayout({
         <html lang="ko">
             <head>
                 <Script
-                    src={`https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=${process.env.NEXT_PUBLIC_MAP_API_KEY}`}
+                    src={`https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=${process.env.NEXT_PUBLIC_MAP_API_KEY}`}
                     strategy="beforeInteractive"
                 />
             </head>

@@ -80,6 +80,8 @@ export default function FieldProfilePage() {
                                     height={828}
                                     alt="프로필 이미지 A"
                                     priority
+                                    // fill
+                                    quality={90}
                                 />
                             </div>
                         );
@@ -104,6 +106,8 @@ export default function FieldProfilePage() {
                                     width={600}
                                     height={828}
                                     alt="프로필 이미지 B"
+                                    // fill
+                                    quality={90}
                                 />
                             </div>
                         );
