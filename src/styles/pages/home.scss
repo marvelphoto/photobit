@@ -40,12 +40,27 @@
 @media (min-width: $tablet-width) and (max-width: $desktop-width) {
     .home div {
         width: $tablet-width;
+        right: 120px;
+        bottom: 120px;
+    }
+
+    .home div p {
+        margin-right: 12px;
+        font-size: $font-size-text-m;
+    }
+
+    .home div span {
+        font-size: 40px;
+        font-weight: $font-weight-semibold;
+        margin-bottom: -4px;
     }
 }
 
 @media (min-width: $mobile-width) and (max-width: $tablet-width) {
     .home div {
         width: $mobile-width;
+        right: 40px;
+        bottom: 100px;
     }
     .home div p {
         margin-right: 12px;
