@@ -15,13 +15,13 @@ export default function AboutPage() {
                         PHOTO <span>BIT</span>
                     </h2>
                     <div>
-                        <Image src="/images/about/11.jpg" alt="main background" fill quality={90} />
+                        <Image src="/images/about/11.jpg" alt="main background" fill />
                     </div>
                 </div>
 
                 <div className="secondFloor">
                     <div>
-                        <Image src="/images/about/2.jpg" alt="main background" fill quality={90} />
+                        <Image src="/images/about/2.jpg" alt="main background" fill />
                     </div>
                     <p>
                         출장사진, 증명·여권사진, 프로필, 복원사진, 가족사진,
