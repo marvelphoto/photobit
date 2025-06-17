@@ -17,7 +17,6 @@ export default function FieldIdPage() {
 
             <ul className={styles.contents}>
                 <li>
-                    {/* width: 314px; height: 452px; */}
                     <Image
                         src={`/images/photos/증명/증명1.webp`}
                         alt="증명이미지"
