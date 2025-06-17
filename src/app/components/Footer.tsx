@@ -2,7 +2,6 @@ import styles from "@/styles/components/footer.module.scss";
 import Nav from "./Navigation";
 
 export default function Footer() {
-    // console.log(variant);
     return (
         <footer className={styles.footer}>
             <div className={styles.footerContents}>
