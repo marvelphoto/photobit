@@ -22,7 +22,7 @@ export default function RootLayout({
                     src={`https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=${process.env.NEXT_PUBLIC_MAP_API_KEY}`}
                     strategy="beforeInteractive"
                 />
-                <!--삭제 금지-->
+                {/* 삭제 금지*/}
                 <meta name="google-site-verification" content="hArxW4hgMtIArXUsR9YVfSXMrQE7z0qORA3or5DUWM8" />
             </head>
             <body>
